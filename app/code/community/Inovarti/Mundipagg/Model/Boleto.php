@@ -52,7 +52,7 @@ class Inovarti_Mundipagg_Model_Boleto extends Inovarti_Mundipagg_Model_Api {
                 'BoletoTransactionCollection' => array('BoletoTransaction' => array(
                         'AmountInCents' => $totals,
                         'Instructions' => $this->getConfigData('message'),
-                        //'NossoNumero' => ( $this->getConfigData('nossonumero') == "") ? 0: $this->getConfigData('nossonumero'),
+                        'NossoNumero' => $order_id,
                         'DaysToAddInBoletoExpirationDate' => $this->getConfigData('daystoaddinboletoexpirationdate'),
                         'TransactionReference' => $this->getConfigData('transactionreference'),
                     ))
